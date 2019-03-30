@@ -6,19 +6,20 @@
   "scripts": {
     "serve:functions": "netlify-lambda serve functions",
     "serve:site": "lite-server --config bs-config.js",
-    "serve": "concurrently -n lambda-functions,lite-server -c green.underline,cyan.underline npm:serve:function npm:serve:site",
+    "serve": "concurrently -n lambda-functions,lite-server -c green.underline,cyan.underline npm:serve:functions npm:serve:site",
     "build": "netlify-lambda build functions"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "netlify-lambda": "^1.4.3"
-  },
   "devDependencies": {
+    "netlify-lambda": "^1.4.3",
     "concurrently": "^4.1.0",
     "connect-history-api-fallback": "^1.6.0",
     "http-proxy-middleware": "^0.19.1",
     "lite-server": "^2.4.0"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
   }
 }
