@@ -6,7 +6,8 @@
   "scripts": {
     "serve:functions": "netlify-lambda serve functions",
     "serve:site": "lite-server --config bs-config.js",
-    "serve": "concurrently -n lambda-functions,lite-server -c green.underline,cyan.underline npm:serve:function npm:serve:site"
+    "serve": "concurrently -n lambda-functions,lite-server -c green.underline,cyan.underline npm:serve:function npm:serve:site",
+    "build": "netlify-lambda build functions"
   },
   "keywords": [],
   "author": "",
